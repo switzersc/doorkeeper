@@ -8,7 +8,7 @@ module Doorkeeper
   def self.configure(&block)
     @config = Config::Builder.new(&block).build
     enable_orm
-    check_for_missing_columns
+    # check_for_missing_columns
     setup_application_owner if @config.enable_application_owner?
   end
 
